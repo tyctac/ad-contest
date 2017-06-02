@@ -1,0 +1,21 @@
+结构用tree命令产生, v1 表示大版本, 下一级目录为不同模型, 再下一级模型为该模型的小版本,
+产生相应的临时文件
+path = config.get_file_path(version1='v1', model='xgboost', version2='v1')
+path += 'X_train'
+即可
+******************************************
+├── file_sturcture.txt
+└── v1 (version 1)
+    └── _xgboost (model)
+        ├── v1 (version 2)
+        │   ├── X_test.npy
+        │   ├── X_train.npy
+        │   ├── y_test.npy
+        │   └── y_train.npy
+        └── v2 (version 2)
+            ├── submission.csv
+            ├── submission.zip
+            ├── X_test.npy
+            ├── X_train.npy
+            ├── y_test.npy
+            └── y_train.npy
