@@ -1,3 +1,4 @@
 raw_data/pre/*.*
 .idea/
 tmp/v1/_xgboost/v1/
+tmp/v1/_xgboost/v2/

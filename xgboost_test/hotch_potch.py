@@ -56,8 +56,9 @@ def show_columns(dfTrain, dfTest):
 # label  instanceID  \
 #  clickTime  creativeID   userID   positionID   connectionType   telecomsOperator   adID   camgaignID   advertiserID   appID   appPlatform   appCategory   age   gender   education   marriageStatus   haveBaby   hometown   residence
 
-def save(dfTrain,dfTest):
+def save(dfTrain, dfTest, y_train):
     flag = False
+    path = config.get_file_path(version2='v2')
     for i,col in enumerate(dfTrain.columns):
         if col == 'conversionTime' or col == 'label':
             continue
@@ -68,8 +69,8 @@ def save(dfTrain,dfTest):
             flag = True
         else:
             X_train, X_test = np.hstack((X_train, x_train)), np.hstack((X_test, x_test))
-    np.save('X_train', X_train)
-    np.save('X_test', X_test)
+    np.save(path+'X_train', X_train)
+    np.save(path+'X_test', X_test)
 
 def predict(X_train, y_train, X_test, result_path):
     param = {'bst:max_depth': 4, 'bst:eta': 1, 'objective': 'binary:logistic'}
