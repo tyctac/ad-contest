@@ -2,3 +2,8 @@ raw_data/pre/*.*
 .idea/
 tmp/v1/_xgboost/v1/
 tmp/v1/_xgboost/v2/
+note_book_code/
+tmp/v1/_xgboost/v4_lzw/
+tmp/v1/_xgboost/v55_lzw/
+tmp/v1/_xgboost/v6/*.csv
+

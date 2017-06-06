@@ -18,8 +18,14 @@ def get_file_path(version1='v1', model='xgboost', version2='v1'):
 
 
 def get_origin_test(): # 获得原始的test DataFrame
-    path = get_home_dir() + '/raw_data/pre/test.csv'
+    path = get_home_dir() + 'raw_data/pre/test.csv'
     return pd.read_csv(path)
+
+
+def get_origin_path():  # 获得原始数据路径
+    return get_home_dir() + 'raw_data/pre/'
+
+
 
 def get_title_weight():
     hir = get_home_dir()
